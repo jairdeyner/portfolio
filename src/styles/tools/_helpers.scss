@@ -1,0 +1,17 @@
+@use "../settings/breakpoints";
+
+$bp: breakpoints.$breakpoints;
+
+// Retorna true si el breakpoint es parte del core
+@function isCoreBreakpoint($bpName) {
+  @if map-has-key($map: $bp, $key: $bpName) {
+    @return true;
+  }
+
+  @return false;
+}
+
+// Retorna el valor del breakpoint
+@function getSizeBreakpoint($bpName) {
+  @return map-get($map: $bp, $key: $bpName);
+}
