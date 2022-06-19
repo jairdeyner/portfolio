@@ -1,0 +1,23 @@
+$_primary_black: #121212;
+$_primary_blackLight: #1e1e1f;
+$_primary_gray: #9f9f9f;
+$_primary_grayLight: #d6d6d6;
+$_primary_grayLight70: rgba(214, 214, 214, 0.7);
+$_primary_yellow: #ffdb70;
+$_primary_white: #fff;
+$_secondary_blackLight: #2b2b2c;
+$_secondary_gray: #6b6b6b;
+$_border_color: #383838;
+
+$bg: $_primary_black;
+$bg_primary: $_primary_blackLight;
+$bg_secondary: $_secondary_blackLight;
+$bg_gradient_gray: linear-gradient(to bottom right, #3f3f40 3%, #303030 97%);
+$bg_gradient_yellow: linear-gradient(to right, #ffdb70, #ffbb5c);
+
+$border: $_border_color;
+$border_gradient_gray: linear-gradient(
+  to bottom right,
+  #404040 0%,
+  rgba(64, 64, 64, 0) 50%
+);
