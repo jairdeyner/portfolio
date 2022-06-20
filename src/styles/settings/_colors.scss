@@ -12,6 +12,7 @@ $_border_color: #383838;
 $bg: $_primary_black;
 $bg_primary: $_primary_blackLight;
 $bg_secondary: $_secondary_blackLight;
+$bg_selection: $_primary_yellow;
 $bg_gradient_gray: linear-gradient(to bottom right, #3f3f40 3%, #303030 97%);
 $bg_gradient_yellow: linear-gradient(to right, #ffdb70, #ffbb5c);
 
@@ -21,3 +22,6 @@ $border_gradient_gray: linear-gradient(
   #404040 0%,
   rgba(64, 64, 64, 0) 50%
 );
+
+$text_primary: $_primary_grayLight;
+$text_selection: $_primary_black;

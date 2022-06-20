@@ -1,0 +1,25 @@
+@use "../settings/typography";
+@use "../settings/colors";
+
+html {
+  background-color: colors.$bg;
+}
+
+body {
+  font-family: typography.$ff_roboto;
+  color: colors.$text_primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: typography.$ff_poppins;
+}
+
+::selection {
+  background-color: colors.$bg_selection;
+  color: colors.$text_selection;
+}
