@@ -1,0 +1,13 @@
+@use "../../styles/tools/fluid";
+@use "../../styles/tools/helpers";
+
+.chip {
+  background-color: #2b2b2c;
+  padding: helpers.flowFromTo(3px, 5px) helpers.flowFromTo(12px, 18px);
+  border-radius: 8px;
+  width: max-content;
+
+  &__text {
+    @include fluid.fontSize(11px, 12px);
+  }
+}

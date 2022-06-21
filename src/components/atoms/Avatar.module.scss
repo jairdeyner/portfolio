@@ -1,0 +1,16 @@
+@use "../../styles/settings/colors";
+@use "../../styles/tools/helpers";
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: helpers.flowFromTo(80px, 150px);
+  height: helpers.flowFromTo(80px, 150px);
+  background-image: colors.$bg_gradient_gray;
+  border-radius: helpers.flowFromTo(20px, 30px);
+
+  &__image {
+    width: helpers.flowFromTo(40px, 75px);
+  }
+}

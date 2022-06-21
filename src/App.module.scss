@@ -1,0 +1,12 @@
+@use "./styles/tools/helpers";
+
+.app {
+  display: flex;
+  justify-content: center;
+  padding: helpers.flowFromTo(12px, 60px) helpers.flowFromTo(12px, 25px);
+
+  .div {
+    background-color: gray;
+    border: 1px solid black;
+  }
+}

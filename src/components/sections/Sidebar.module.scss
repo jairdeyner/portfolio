@@ -1,0 +1,45 @@
+@use "../../styles/settings/colors";
+@use "../../styles/tools/fluid";
+@use "../../styles/tools/helpers";
+@use "../../styles/tools/media";
+
+.sidebar {
+  background-color: colors.$bg_primary;
+  border: 1px solid colors.$border;
+  border-radius: 20px;
+  padding: helpers.flowFromTo(15px, 30px) helpers.flowFromTo(15px, 30px);
+  display: flex;
+  flex-direction: column;
+  gap: helpers.flowFromTo(15px, 32px);
+
+  @include media.from(xl) {
+    padding-top: 60px;
+  }
+
+  &__header {
+    display: flex;
+    gap: helpers.flowFromTo(15px, 25px);
+
+    @include media.from(xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media.from(xl) {
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    color: colors.$text_white;
+    margin-bottom: helpers.flowFromTo(10px, 15px);
+    @include fluid.fontSize(17px, 26px);
+  }
+}

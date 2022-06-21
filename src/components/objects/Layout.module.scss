@@ -1,0 +1,14 @@
+@use "../../styles/tools/helpers";
+@use "../../styles/tools/media";
+
+.layout {
+  display: grid;
+  gap: helpers.flowFromTo(15px, 25px);
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+
+  @include media.from(xl) {
+    grid-template-columns: 1fr 3fr;
+  }
+}
