@@ -42,4 +42,18 @@
     margin-bottom: helpers.flowFromTo(10px, 15px);
     @include fluid.fontSize(17px, 26px);
   }
+
+  &__socialIconsContainer {
+    display: flex;
+    gap: 15px;
+
+    @include media.from(xl) {
+      justify-content: center;
+    }
+  }
+
+  &__socialIconBox {
+    cursor: pointer;
+    opacity: 0.7;
+  }
 }

@@ -1,0 +1,18 @@
+@use "../../styles/tools/helpers";
+
+.icon {
+  &__image {
+    width: inherit;
+    height: inherit;
+  }
+
+  &-small {
+    width: helpers.flowFromTo(16px, 18px);
+    height: helpers.flowFromTo(16px, 18px);
+  }
+
+  &-medium {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,43 @@
+@use "../../../styles/tools/helpers";
+@use "../../../styles/tools/fluid";
+@use "../../../styles/settings/colors";
+@use "../../../styles/settings/typography";
+
+.informationCard {
+  display: flex;
+  gap: 16px;
+
+  &__iconBox {
+    border-radius: helpers.flowFromTo(8px, 12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: helpers.flowFromTo(30px, 48px);
+    height: helpers.flowFromTo(30px, 48px);
+    position: relative;
+    background-image: colors.$border_gradient_gray;
+    z-index: 1;
+
+    ::after {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      background-color: #202022;
+      border-radius: helpers.flowFromTo(8px, 12px);
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    font-family: typography.$ff_poppins;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: helpers.flowFromTo(2px, 6px);
+    @include fluid.fontSize(11px, 12px);
+  }
+
+  &__text {
+    font-weight: 300;
+    @include fluid.fontSize(13px, 14px);
+  }
+}

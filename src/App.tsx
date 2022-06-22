@@ -1,7 +1,7 @@
 import Layout from "./components/objects/Layout";
+import Sidebar from "./components/sections/Sidebar";
 
 import styles from "./App.module.scss";
-import Sidebar from "./components/sections/Sidebar";
 
 const App = () => {
   return (

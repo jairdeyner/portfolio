@@ -1,0 +1,7 @@
+@use "../../../styles/tools/helpers";
+
+.informationCardList {
+  display: flex;
+  flex-direction: column;
+  gap: helpers.flowFromTo(16px, 30px);
+}
