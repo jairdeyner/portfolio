@@ -23,3 +23,16 @@ h6 {
   background-color: colors.$bg_selection;
   color: colors.$text_selection;
 }
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: colors.$text_primary;
+  text-decoration: none;
+}
