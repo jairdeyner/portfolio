@@ -36,3 +36,10 @@ a {
   color: colors.$text_primary;
   text-decoration: none;
 }
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}

@@ -22,7 +22,14 @@ $border_gradient_gray: linear-gradient(
   #404040 0%,
   rgba(64, 64, 64, 0) 50%
 );
+$border_gradient_jet: linear-gradient(
+    to bottom right,
+    hsla(240, 1%, 18%, 0.251) 0%,
+    hsla(240, 2%, 11%, 0) 100%
+  ),
+  hsl(240, 2%, 13%);
 
 $text_primary: $_primary_grayLight;
 $text_white: $_primary_white;
 $text_selection: $_primary_black;
+$text_secondary: $_primary_yellow;
