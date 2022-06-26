@@ -1,0 +1,24 @@
+@use "../../styles/tools/helpers";
+@use "../../styles/settings/colors";
+@use "../../styles/tools/media";
+
+.iconButton {
+  padding: 10px helpers.flowFromTo(10px, 15px);
+  border-bottom-left-radius: 15px;
+
+  &__iconBox {
+    @include media.from(sm) {
+      display: none;
+    }
+  }
+
+  &__text {
+    color: colors.$text_secondary;
+    font-size: 12px;
+    display: none;
+
+    @include media.from(sm) {
+      display: block;
+    }
+  }
+}

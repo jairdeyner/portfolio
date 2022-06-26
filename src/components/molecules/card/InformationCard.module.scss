@@ -28,6 +28,12 @@
     }
   }
 
+  &__info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   &__title {
     font-family: typography.$ff_poppins;
     font-weight: 600;

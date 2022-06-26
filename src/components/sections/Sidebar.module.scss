@@ -11,9 +11,57 @@
   display: flex;
   flex-direction: column;
   gap: helpers.flowFromTo(15px, 32px);
+  position: relative;
+  max-height: helpers.flowFromTo(112px, 210px);
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+
+  &-active {
+    max-height: 551px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: helpers.flowFromTo(15px, 32px);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    @include media.from(xl) {
+      opacity: 1;
+    }
+  }
+
+  &-active &__info {
+    opacity: 1;
+  }
 
   @include media.from(xl) {
     padding-top: 60px;
+    max-height: max-content;
+  }
+
+  &__iconButtonBox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: colors.$border_gradient_gray;
+    z-index: 1;
+    box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    border-bottom-left-radius: 15px;
+
+    ::after {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      background-image: colors.$border_gradient_jet;
+      border-bottom-left-radius: 15px;
+      z-index: -1;
+    }
+
+    @include media.from(xl) {
+      display: none;
+    }
   }
 
   &__header {
