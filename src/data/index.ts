@@ -22,7 +22,7 @@ const contactInformation: Array<ContactInformation> = [
     },
   },
   {
-    id: 2,
+    id: 3,
     icon: "iconLocation",
     title: "ubicación",
     text: "Ate, Lima, Perú",
