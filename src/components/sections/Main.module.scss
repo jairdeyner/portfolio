@@ -1,0 +1,12 @@
+@use "../../styles/tools/helpers";
+@use "../../styles/settings/colors";
+
+.main {
+  background-color: colors.$bg_primary;
+  border: 1px solid colors.$border;
+  border-radius: 20px;
+  padding: helpers.flowFromTo(15px, 30px);
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - helpers.flowFromTo(112px, 300px));
+}
