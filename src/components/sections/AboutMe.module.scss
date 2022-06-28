@@ -1,0 +1,13 @@
+@use "../../styles/tools/helpers";
+@use "../../styles/tools/fluid";
+
+.aboutMe {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    margin-bottom: helpers.flowFromTo(18px, 30px);
+    gap: helpers.flowFromTo(13px, 34px);
+    @include fluid.fontSize(14px, 16px);
+  }
+}

@@ -24,6 +24,7 @@ export const InformationCard = ({ data }: InformationCardProps) => {
           <Tag
             className={styles.informationCard__text}
             href={data.htmlElement.href}
+            title={data.text}
           >
             {data.text}
           </Tag>

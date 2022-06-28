@@ -1,4 +1,4 @@
-import { ContactInformation, SocialNetwork } from "../interfaces";
+import { ContactInformation, Skill, SocialNetwork } from "../interfaces";
 
 const contactInformation: Array<ContactInformation> = [
   {
@@ -50,4 +50,57 @@ const socialNetworks: Array<SocialNetwork> = [
   },
 ];
 
-export { contactInformation, socialNetworks };
+const skills: Array<Skill> = [
+  {
+    id: 1,
+    name: "HTML 5",
+    img: "skillHtml",
+  },
+  {
+    id: 2,
+    name: "CSS 3",
+    img: "skillCss",
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    img: "skillJs",
+  },
+  {
+    id: 4,
+    name: "React JS",
+    img: "skillReact",
+  },
+  {
+    id: 5,
+    name: "Java",
+    img: "skillJava",
+  },
+  {
+    id: 6,
+    name: "MySQL",
+    img: "skillMysql",
+  },
+  {
+    id: 7,
+    name: "Firebase",
+    img: "skillFirebase",
+  },
+  {
+    id: 8,
+    name: "Git",
+    img: "skillGit",
+  },
+  {
+    id: 9,
+    name: "GitHub",
+    img: "skillGithub",
+  },
+  {
+    id: 10,
+    name: "Figma",
+    img: "skillFigma",
+  },
+];
+
+export { contactInformation, socialNetworks, skills };

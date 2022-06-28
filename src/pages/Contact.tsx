@@ -1,11 +1,10 @@
+import Heading from "../components/atoms/Heading";
 import ContactForm from "../components/sections/ContactForm";
 
 const Contact = () => {
   return (
     <div>
-      <header>
-        <h2>Contáctame</h2>
-      </header>
+      <Heading text="Contáctame" />
 
       <ContactForm />
     </div>

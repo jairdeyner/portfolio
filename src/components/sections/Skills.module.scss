@@ -1,0 +1,7 @@
+@use "../../styles/tools/helpers";
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: helpers.flowFromTo(20px, 47px);
+}

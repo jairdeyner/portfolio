@@ -1,17 +1,20 @@
+import Button from "../atoms/Button";
+import Heading from "../atoms/Heading";
+
+import styles from "./AboutMe.module.scss";
+
 const AboutMe = () => {
   return (
-    <section>
-      <header>
-        <h2>Sobre Mí</h2>
-      </header>
-      <div>
-        <p>
+    <section className={styles.aboutMe}>
+      <Heading text="Sobre Mí" />
+      <div className={styles.aboutMe__content}>
+        <p className={styles.aboutMe__text}>
           Hola soy Jair apasionado por el desarrollo web y el aprendizaje,
           actualmente estudio en el instituto Idat la carrera Desarrollo de
           Sistemas de Información (5° ciclo) y en plataformas de educación en
           línea.
         </p>
-        <p>
+        <p className={styles.aboutMe__text}>
           Mi alta curiosidad me permite aprender fácilmente nuevas tecnologías y
           herramientas, y disfruto en compartir mis conocimientos ayudando a
           otros cuando es posible, ya que es una buena forma de apoyar a los
@@ -19,7 +22,14 @@ const AboutMe = () => {
           enseñando.
         </p>
       </div>
-      <button>Descargar CV</button>
+
+      <Button
+        type="button"
+        model="ghost"
+        size="normal"
+        value="Descargar CV"
+        href="./CV_JairTelloVargas.pdf"
+      />
     </section>
   );
 };

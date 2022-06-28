@@ -1,11 +1,10 @@
+import Heading from "../components/atoms/Heading";
 import ProjectList from "../components/sections/ProjectList";
 
 const Portfolio = () => {
   return (
     <div>
-      <header>
-        <h2>Portafolio</h2>
-      </header>
+      <Heading text="Portafolio" />
 
       <ProjectList />
     </div>

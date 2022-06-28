@@ -1,0 +1,27 @@
+@use "../../styles/tools/helpers";
+@use "../../styles/tools/fluid";
+@use "../../styles/settings/colors";
+
+.heading {
+  margin-bottom: helpers.flowFromTo(15px, 38px);
+
+  &__title {
+    font-weight: 600;
+    color: colors.$text_white;
+    position: relative;
+    padding-bottom: helpers.flowFromTo(7px, 20px);
+    z-index: 1;
+    @include fluid.fontSize(24px, 32px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: helpers.flowFromTo(30px, 40px);
+      height: helpers.flowFromTo(3px, 5px);
+      background-image: colors.$bg_gradient_yellow;
+      border-radius: 3px;
+    }
+  }
+}

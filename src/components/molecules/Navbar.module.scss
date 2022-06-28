@@ -14,6 +14,7 @@
   border-top-right-radius: helpers.flowFromTo(12px, 20px);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
   padding: 0 helpers.flowFromTo(0px, 40px);
+  z-index: 5;
 
   @include media.from(lg) {
     position: absolute;
