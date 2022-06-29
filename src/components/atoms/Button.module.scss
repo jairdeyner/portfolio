@@ -17,8 +17,8 @@
     color: #000;
 
     &:hover {
-      background-color: darken($color: colors.$bg_btn_primary, $amount: 10);
-      border-color: darken($color: colors.$bg_btn_primary, $amount: 10);
+      background-color: darken($color: colors.$bg_btn_primary, $amount: 2);
+      border-color: darken($color: colors.$bg_btn_primary, $amount: 2);
     }
   }
 
@@ -30,6 +30,11 @@
 
   &-ghost {
     color: colors.$text_secondary;
+
+    &:hover {
+      color: darken($color: colors.$bg_btn_primary, $amount: 2);
+      border-color: darken($color: colors.$bg_btn_primary, $amount: 2);
+    }
   }
 
   &-medium {
