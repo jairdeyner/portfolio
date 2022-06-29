@@ -7,8 +7,12 @@
   padding: helpers.flowFromTo(12px, 60px) helpers.flowFromTo(12px, 25px);
   padding-bottom: 75px;
 
+  @include media.from(lg) {
+    padding-bottom: helpers.flowFromTo(12px, 60px);
+  }
+
   @include media.from(xl) {
-    padding-bottom: 60px;
+    padding-bottom: 10px;
   }
 
   .div {
