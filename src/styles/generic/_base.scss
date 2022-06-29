@@ -48,3 +48,17 @@ input {
   background-color: transparent;
   border: none;
 }
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: colors.$bg;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba($color: #fff, $alpha: 0.102);
+  border-radius: 4px;
+}
