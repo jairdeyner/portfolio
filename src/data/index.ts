@@ -1,4 +1,9 @@
-import { ContactInformation, Skill, SocialNetwork } from "../interfaces";
+import {
+  ContactInformation,
+  Project,
+  Skill,
+  SocialNetwork,
+} from "../interfaces";
 
 const contactInformation: Array<ContactInformation> = [
   {
@@ -103,4 +108,27 @@ const skills: Array<Skill> = [
   },
 ];
 
-export { contactInformation, socialNetworks, skills };
+const projects: Array<Project> = [
+  {
+    id: 1,
+    img: "portfolioScreen",
+    name: "Portafolio",
+    repository: "https://github.com/jairdeyner/portfolio",
+  },
+  {
+    id: 2,
+    homepage: "https://calvic.vercel.app",
+    img: "calvicScreen",
+    name: "CALVIC",
+    repository: "https://github.com/Jair1996/calvic-app",
+  },
+  {
+    id: 3,
+    homepage: "https://gifexpert.vercel.app",
+    img: "gifexpertScreen",
+    name: "Gif Expert",
+    repository: "https://github.com/jairdeyner/gif-expert",
+  },
+];
+
+export { contactInformation, socialNetworks, skills, projects };
