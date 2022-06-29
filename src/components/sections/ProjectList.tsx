@@ -1,7 +1,9 @@
+import { ProjectCardList } from "../molecules/cardList";
+
 const ProjectList = () => {
   return (
     <section>
-      <p>Lista de proyectos</p>
+      <ProjectCardList />
     </section>
   );
 };

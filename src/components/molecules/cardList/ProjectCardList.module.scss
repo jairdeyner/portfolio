@@ -1,0 +1,7 @@
+@use "../../../styles/tools/helpers";
+
+.projectCardList {
+  display: grid;
+  gap: helpers.flowFromTo(15px, 22px);
+  // grid-template-columns: repeat(3, 1fr);
+}

@@ -1,0 +1,21 @@
+@use "../../../styles/settings/colors";
+
+.projectCard {
+  border-radius: 16px;
+  background-image: colors.$bg_gradient_gray;
+  padding: 10px;
+  padding-bottom: 23px;
+
+  &__thumbnail {
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1 / 0.8;
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: inherit;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+}
