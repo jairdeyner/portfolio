@@ -1,6 +1,7 @@
 import { Project } from "../../../interfaces";
 import * as projects from "../../../assets/images/projects";
 import styles from "./ProjectCard.module.scss";
+import Button from "../../atoms/Button";
 
 interface ProjectCardProps {
   project: Project;
@@ -18,10 +19,24 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           alt={`${name} screenshot`}
         />
       </div>
-      <h3>{name}</h3>
-      <div>
-        {homepage && <button>homepage</button>}
-        <button>repository</button>
+      <h3 className={styles.projectCard__title}>{name}</h3>
+      <div className={styles.projectCard__buttonsBox}>
+        {homepage && (
+          <Button
+            model="primary"
+            size="medium"
+            type="button"
+            value="Ver Página"
+            href={homepage}
+          />
+        )}
+        <Button
+          model="ghost"
+          size="medium"
+          type="button"
+          value="GitHub"
+          href={repository}
+        />
       </div>
     </article>
   );
