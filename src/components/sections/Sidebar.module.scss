@@ -16,6 +16,34 @@
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 
+  @include media.from(xl) {
+    padding-top: 60px;
+    min-height: calc(100vh - 70px);
+    overflow-y: auto;
+    position: sticky;
+    top: 60px;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 4px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: #fff, $alpha: 0.102);
+      }
+    }
+  }
+
   &-active {
     max-height: 551px;
   }
@@ -34,11 +62,6 @@
 
   &-active &__info {
     opacity: 1;
-  }
-
-  @include media.from(xl) {
-    padding-top: 60px;
-    max-height: max-content;
   }
 
   &__iconButtonBox {
