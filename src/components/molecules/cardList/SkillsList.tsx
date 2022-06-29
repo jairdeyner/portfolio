@@ -1,18 +1,14 @@
-import { skills } from "../../../data";
+import { SkillCard } from "../card";
 
-import * as skillsImages from "../../../assets/images/skills";
+import { skills } from "../../../data";
+import styles from "./SkillsList.module.scss";
 
 export const SkillsList = () => {
-  console.log(skills);
-
   return (
-    <ul>
-      {skills.map(({ id, name, img }) => (
-        <li key={id}>
-          <article>
-            <p>{name}</p>
-            <img src={skillsImages[img]} alt={name} />
-          </article>
+    <ul className={styles.skillsList}>
+      {skills.map(skill => (
+        <li key={skill.id}>
+          <SkillCard skill={skill} />
         </li>
       ))}
     </ul>

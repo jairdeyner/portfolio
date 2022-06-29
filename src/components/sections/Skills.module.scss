@@ -1,7 +1,14 @@
 @use "../../styles/tools/helpers";
+@use "../../styles/settings/colors";
 
 .skills {
   display: flex;
   flex-direction: column;
   gap: helpers.flowFromTo(20px, 47px);
+
+  &__title {
+    font-weight: 600;
+    color: colors.$text_white;
+    font-size: helpers.flowFromTo(18.5px, 24px);
+  }
 }
