@@ -1,0 +1,61 @@
+@use "../../styles/tools/media";
+@use "../../styles/tools/helpers";
+@use "../../styles/settings/colors";
+
+.contactForm {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+  }
+
+  &__inputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+
+    @include media.from(sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__formControlContainer {
+    width: 100%;
+    position: relative;
+  }
+
+  &__formControl {
+    display: block;
+    width: 100%;
+    font-size: helpers.flowFromTo(14px, 16px);
+    padding: 0.8em;
+    border-radius: helpers.flowFromTo(10px, 14px);
+    border: 1px solid colors.$border;
+
+    &::placeholder {
+      color: colors.$text_placeholder;
+    }
+
+    &-error {
+      outline: 1px solid colors.$error;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: helpers.flowFromTo(10px, 20px);
+    font-size: helpers.flowFromTo(14px, 16px);
+  }
+
+  &__text {
+    position: absolute;
+    font-size: helpers.flowFromTo(12px, 14px);
+    color: colors.$error;
+    bottom: -25px;
+  }
+
+  &__buttonBox {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
