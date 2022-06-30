@@ -8,6 +8,7 @@ html {
 body {
   font-family: typography.$ff_roboto;
   color: colors.$text_primary;
+  overflow-y: scroll;
 }
 
 h1,
@@ -44,9 +45,19 @@ button {
   background-color: transparent;
 }
 
-input {
+input,
+textarea {
   background-color: transparent;
   border: none;
+  color: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: vertical;
 }
 
 body::-webkit-scrollbar {
