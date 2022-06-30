@@ -4,7 +4,6 @@ import iconLinkedin from "./icon_linkedin.svg";
 import iconLocation from "./icon_location.svg";
 import iconMail from "./icon_mail.svg";
 import iconPhone from "./icon_phone.svg";
-import iconSend from "./icon_send.svg";
 import iconTwitter from "./icon_twitter.svg";
 
 export {
@@ -14,6 +13,5 @@ export {
   iconLocation,
   iconMail,
   iconPhone,
-  iconSend,
   iconTwitter,
 };
