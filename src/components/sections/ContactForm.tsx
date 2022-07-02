@@ -1,4 +1,6 @@
+import emailjs from "@emailjs/browser";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import { useRef } from "react";
 import * as Yup from "yup";
 
 import Button from "../atoms/Button";
@@ -6,6 +8,8 @@ import Button from "../atoms/Button";
 import styles from "./ContactForm.module.scss";
 
 const ContactForm = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+
   return (
     <section className={styles.contactForm}>
       <Formik
@@ -16,7 +20,25 @@ const ContactForm = () => {
         }}
         onSubmit={(values, { resetForm }) => {
           console.log(values);
-          resetForm();
+          emailjs
+            .sendForm(
+              import.meta.env.VITE_EMAILJS_SERVICE_ID,
+              import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+              formRef.current as HTMLFormElement,
+              import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            )
+            .then(
+              result => {
+                console.log(result.text);
+                console.log("mensaje enviado");
+                resetForm();
+              },
+              error => {
+                console.log(error.text);
+                console.error("ocurrio un error");
+                resetForm();
+              }
+            );
         }}
         validationSchema={Yup.object({
           name: Yup.string().required("Por favor ingrese un nombre"),
@@ -27,7 +49,7 @@ const ContactForm = () => {
         })}
       >
         {formik => (
-          <Form className={styles.contactForm__form}>
+          <Form ref={formRef} className={styles.contactForm__form}>
             <div className={styles.contactForm__inputBox}>
               <div className={styles.contactForm__formControlContainer}>
                 <label className={styles.contactForm__label} htmlFor="name">
