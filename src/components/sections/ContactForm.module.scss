@@ -36,7 +36,8 @@
       color: colors.$text_placeholder;
     }
 
-    &-error {
+    &-error,
+    &-error:focus {
       outline: 1px solid colors.$error;
     }
   }
