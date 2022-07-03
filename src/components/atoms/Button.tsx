@@ -6,15 +6,27 @@ interface ButtonProps {
   href?: string;
   model: "primary" | "ghost";
   size: "medium" | "normal";
+  disabled?: boolean;
+  onClick?: () => void;
 }
 
-const Button = ({ type, value, href, model, size }: ButtonProps) => {
+const Button = ({
+  type,
+  value,
+  href,
+  model,
+  size,
+  disabled,
+  onClick,
+}: ButtonProps) => {
   return (
     <button
       className={`${styles.button} ${styles[`button-${model}`]} ${
         styles[`button-${size}`]
       }`}
       type={type}
+      disabled={disabled}
+      onClick={onClick}
     >
       {href ? (
         <a
