@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
+
 import Button from "../atoms/Button";
 
 import styles from "./Modal.module.scss";
@@ -18,11 +20,39 @@ const Modal = ({ title, type, text, closeModal }: ModalProps) => {
   }, []);
 
   return createPortal(
-    <article
+    <motion.article
+      key="modal"
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+        transition: {
+          duration: 0.3,
+        },
+      }}
+      exit={{
+        opacity: 0,
+      }}
       onClick={closeModal}
       className={`${styles.modal} ${styles[`modal-${type}`]}`}
     >
-      <div onClick={e => e.stopPropagation()} className={styles.modal__content}>
+      <motion.div
+        initial={{
+          scale: 0,
+        }}
+        animate={{
+          scale: 1,
+          transition: {
+            duration: 0.3,
+          },
+        }}
+        exit={{
+          scale: 0,
+        }}
+        onClick={e => e.stopPropagation()}
+        className={styles.modal__content}
+      >
         <h2 className={styles.modal__title}>{title}</h2>
 
         <p className={styles.modal__text}>{text}</p>
@@ -36,8 +66,8 @@ const Modal = ({ title, type, text, closeModal }: ModalProps) => {
             onClick={closeModal}
           />
         </div>
-      </div>
-    </article>,
+      </motion.div>
+    </motion.article>,
     document.getElementById("modal") as HTMLElement
   );
 };

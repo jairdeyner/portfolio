@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import { AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import * as Yup from "yup";
 import { useModal } from "../../hooks/useModal";
@@ -138,23 +139,26 @@ const ContactForm = () => {
           </Form>
         )}
       </Formik>
-
-      {isOpenModalSuccess && (
-        <Modal
-          type="success"
-          title="Éxito"
-          text="Mensaje enviado correctamente"
-          closeModal={closeModalSuccess}
-        />
-      )}
-      {isOpenModalError && (
-        <Modal
-          type="error"
-          title="Error"
-          text="Ha ocurrido un error inténtelo de nuevo"
-          closeModal={closeModalError}
-        />
-      )}
+      <AnimatePresence>
+        {isOpenModalSuccess && (
+          <AnimatePresence>
+            <Modal
+              type="success"
+              title="Éxito"
+              text="Mensaje enviado correctamente"
+              closeModal={closeModalSuccess}
+            />
+          </AnimatePresence>
+        )}
+        {isOpenModalError && (
+          <Modal
+            type="error"
+            title="Error"
+            text="Ha ocurrido un error inténtelo de nuevo"
+            closeModal={closeModalError}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };
