@@ -1,0 +1,49 @@
+@use "../../styles/tools/helpers";
+@use "../../styles/settings/colors";
+
+.modal {
+  backdrop-filter: blur(2px);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba($color: #000, $alpha: 0.75);
+  min-height: 100vh;
+
+  &__content {
+    border: 1px solid colors.$border;
+    background-color: colors.$bg_primary;
+    padding: helpers.flowFromTo(18px, 32px);
+    border-radius: helpers.flowFromTo(10px, 14px);
+    display: flex;
+    flex-direction: column;
+    gap: helpers.flowFromTo(25px, 30px);
+  }
+
+  &__title {
+    color: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: helpers.flowFromTo(29px, 32px);
+    line-height: 1;
+  }
+
+  &__text {
+    color: colors.$text_primary;
+    font-size: helpers.flowFromTo(14px, 16px);
+  }
+
+  &__buttonBox {
+    text-align: center;
+  }
+
+  &-error {
+    color: colors.$error;
+  }
+
+  &-success {
+    color: colors.$success;
+  }
+}

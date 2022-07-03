@@ -40,6 +40,11 @@
     &-error:focus {
       outline: 1px solid colors.$error;
     }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
   }
 
   &__label {

@@ -1,14 +1,20 @@
 import emailjs from "@emailjs/browser";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import * as Yup from "yup";
+import { useModal } from "../../hooks/useModal";
 
 import Button from "../atoms/Button";
+import Modal from "../molecules/Modal";
 
 import styles from "./ContactForm.module.scss";
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
+  const [isOpenModalSuccess, openModalSuccess, closeModalSuccess] =
+    useModal(false);
+  const [isOpenModalError, openModalError, closeModalError] = useModal(false);
 
   return (
     <section className={styles.contactForm}>
@@ -19,7 +25,7 @@ const ContactForm = () => {
           message: "",
         }}
         onSubmit={(values, { resetForm }) => {
-          console.log(values);
+          setIsSendingEmail(true);
           emailjs
             .sendForm(
               import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -28,17 +34,17 @@ const ContactForm = () => {
               import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             )
             .then(
-              result => {
-                console.log(result.text);
-                console.log("mensaje enviado");
+              () => {
+                openModalSuccess();
                 resetForm();
               },
-              error => {
-                console.log(error.text);
-                console.error("ocurrio un error");
-                resetForm();
+              () => {
+                openModalError();
               }
-            );
+            )
+            .finally(() => {
+              setIsSendingEmail(false);
+            });
         }}
         validationSchema={Yup.object({
           name: Yup.string().required("Por favor ingrese un nombre"),
@@ -56,6 +62,7 @@ const ContactForm = () => {
                   Nombre:
                 </label>
                 <Field
+                  disabled={isSendingEmail}
                   name="name"
                   type="text"
                   autoComplete="off"
@@ -78,6 +85,7 @@ const ContactForm = () => {
                   Correo:
                 </label>
                 <Field
+                  disabled={isSendingEmail}
                   name="email"
                   type="email"
                   autoComplete="off"
@@ -101,6 +109,7 @@ const ContactForm = () => {
                 Mensaje:
               </label>
               <Field
+                disabled={isSendingEmail}
                 name="message"
                 as="textarea"
                 autoComplete="off"
@@ -122,12 +131,30 @@ const ContactForm = () => {
                 model="ghost"
                 size="normal"
                 type="submit"
-                value="Enviar Mensaje"
+                disabled={isSendingEmail}
+                value={isSendingEmail ? "Enviando..." : "Enviar Mensaje"}
               />
             </div>
           </Form>
         )}
       </Formik>
+
+      {isOpenModalSuccess && (
+        <Modal
+          type="success"
+          title="Éxito"
+          text="Mensaje enviado correctamente"
+          closeModal={closeModalSuccess}
+        />
+      )}
+      {isOpenModalError && (
+        <Modal
+          type="error"
+          title="Error"
+          text="Ha ocurrido un error inténtelo de nuevo"
+          closeModal={closeModalError}
+        />
+      )}
     </section>
   );
 };
