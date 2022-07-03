@@ -16,10 +16,9 @@ const AboutMe = () => {
         </p>
         <p className={styles.aboutMe__text}>
           Mi alta curiosidad me permite aprender fácilmente nuevas tecnologías y
-          herramientas, y disfruto en compartir mis conocimientos ayudando a
-          otros cuando es posible, ya que es una buena forma de apoyar a los
-          demás y te permite aprender más sobre la tecnología que se está
-          enseñando.
+          herramientas, disfruto en compartir mis conocimientos ayudando a otros
+          cuando es posible, ya que es una buena forma de apoyar a los demás y
+          me permite aprender más sobre la tecnología que estoy enseñando.
         </p>
       </div>
 
