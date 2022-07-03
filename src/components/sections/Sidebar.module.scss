@@ -18,7 +18,8 @@
 
   @include media.from(xl) {
     padding-top: 60px;
-    min-height: calc(100vh - 70px);
+    height: calc(100vh - 70px);
+    max-height: 707px;
     overflow-y: auto;
     position: sticky;
     top: 60px;
