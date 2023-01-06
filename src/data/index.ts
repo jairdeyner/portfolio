@@ -77,6 +77,16 @@ const skills: Array<Skill> = [
     img: "skillReact",
   },
   {
+    id: 11,
+    name: "Angular",
+    img: "skillAngular",
+  },
+  {
+    id: 12,
+    name: "Node JS",
+    img: "skillNodejs",
+  },
+  {
     id: 5,
     name: "Java",
     img: "skillJava",

@@ -8,6 +8,8 @@ import skillJava from "./skill_java.svg";
 import skillJs from "./skill_js.svg";
 import skillMysql from "./skill_mysql.svg";
 import skillReact from "./skill_react.svg";
+import skillAngular from "./skill_angular.svg";
+import skillNodejs from "./skill_nodejs.svg";
 
 export {
   skillCss,
@@ -20,4 +22,6 @@ export {
   skillJs,
   skillMysql,
   skillReact,
+  skillAngular,
+  skillNodejs,
 };

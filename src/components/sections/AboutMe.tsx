@@ -9,10 +9,10 @@ const AboutMe = () => {
       <Heading text="Sobre Mí" />
       <div className={styles.aboutMe__content}>
         <p className={styles.aboutMe__text}>
-          Hola soy Jair apasionado por el desarrollo web y el aprendizaje,
-          actualmente estudio en el instituto Idat la carrera Desarrollo de
-          Sistemas de Información (5° ciclo) y en plataformas de educación en
-          línea.
+          Hola soy Jair apasionado por el desarrollo web y el aprendizaje, con
+          conocimientos en backend y frontend, últimamente trabajando más en el
+          desarrollo frontend y actualmente me capacito en plataformas de
+          educación en línea.
         </p>
         <p className={styles.aboutMe__text}>
           Mi alta curiosidad me permite aprender fácilmente nuevas tecnologías y
