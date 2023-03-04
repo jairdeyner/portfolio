@@ -120,23 +120,37 @@ const skills: Array<Skill> = [
 
 const projects: Array<Project> = [
   {
+    id: 0,
+    homepage: "https://deyner-store.web.app",
+    img: "deynerstoreScreen",
+    name: "Deyner Store - Angular",
+    repository: "https://github.com/Jair1996/deyner-store",
+  },
+  {
+    id: 4,
+    homepage: "https://jair1996.github.io/portafolio/",
+    img: "portfolioScreen",
+    name: "Portafolio - Angular",
+    repository: "https://github.com/Jair1996/portafolio",
+  },
+  {
     id: 1,
     img: "portfolioScreen",
-    name: "Portafolio",
+    name: "Portafolio - React",
     repository: "https://github.com/jairdeyner/portfolio",
   },
   {
     id: 2,
     homepage: "https://calvic.vercel.app",
     img: "calvicScreen",
-    name: "CALVIC",
+    name: "CALVIC - React",
     repository: "https://github.com/Jair1996/calvic-app",
   },
   {
     id: 3,
     homepage: "https://gifexpert.vercel.app",
     img: "gifexpertScreen",
-    name: "Gif Expert",
+    name: "Gif Expert - React",
     repository: "https://github.com/jairdeyner/gif-expert",
   },
 ];
